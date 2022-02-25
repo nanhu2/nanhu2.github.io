@@ -1,0 +1,10 @@
+
+<p class="card" draggable="true" (dragstart)="dragStart($event)" id="{{card.id}}" *ngIf="display && DisplayMe" (click) = "displayFalse()">
+  {{card.description}} <button (click) ="delete(); $event.stopPropagation()" >Delete</button>
+</p>
+  <!-- <button (click) ="delete()">Delete</button> -->
+<p *ngIf="!display">
+  <input #editCardInput type="text" (keyup.enter)="onEnter(editCardInput.value); editCardInput.value=''; display = true;">
+</p>
+
+

@@ -1,0 +1,5 @@
+<div>
+  <app-list *ngFor="let list of lists" [list]="list" [cardStore]="cardStore"></app-list>
+  <input #addCardInput type="text" (keyup.enter)="onEnter(addCardInput.value); addCardInput.value=''; displayAddList=false;" *ngIf="displayAddList" autofocus>
+  <a href="#" class="list__newcard" (click)="toggleDisplayAddList();">Add a column...</a>
+</div>

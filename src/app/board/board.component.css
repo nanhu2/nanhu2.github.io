@@ -1,0 +1,17 @@
+div {
+  background: #0079bf;
+  display: flex;
+  padding: 0 5px;
+  height: 100vh;
+  overflow-x: scroll;
+}
+
+input{
+  width: 300px;
+  padding: 10px;
+  border: 1px solid violet;
+  outline: 0;
+  background: #fff;
+  box-shadow:none;
+  height:5%;
+}
