@@ -15,3 +15,13 @@ input{
   box-shadow:none;
   height:5%;
 }
+
+.add-card{
+  color: red;
+  font-weight: bold;
+  border-style: solid;
+  border-color: red;
+  border-width: 5px;
+  display: inline;
+  border-radius: 25px;
+}

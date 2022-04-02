@@ -1,10 +1,11 @@
 
-<p class="card" draggable="true" (dragstart)="dragStart($event)" id="{{card.id}}" *ngIf="display && DisplayMe" (click) = "displayFalse()">
-  {{card.description}} <button (click) ="delete(); $event.stopPropagation()" >Delete</button>
+<p class="card" draggable="true" (dragstart)="dragStart($event)" id="{{card.id}}" [style.display]="'block'" *ngIf = "display">
+  {{card.description}} <button [attr.id] = "'edit' + card.id" (click) = "displayFalse(card.id); $event.stopPropagation()" [style.display] = "'block'">Edit</button><button [attr.id] = "'delete' + card.id" (click) ="delete(card.id); $event.stopPropagation()" [style.display]="'block'">Delete</button>
+  <button [attr.id] = "'restore' + card.id" (click) = "restoreMe(card.id); $event.stopPropagation()" [style.display] ="'none'">Restore</button>
 </p>
   <!-- <button (click) ="delete()">Delete</button> -->
 <p *ngIf="!display">
-  <input #editCardInput type="text" (keyup.enter)="onEnter(editCardInput.value); editCardInput.value=''; display = true;">
+  <input #editCardInput type="text" value = "{{card.description}}"(keyup.enter)="onEnter(editCardInput.value); editCardInput.value=''; display = true;">
 </p>
 
 

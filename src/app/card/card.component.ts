@@ -11,8 +11,29 @@ export class CardComponent implements OnInit {
   display = true;
   constructor() {}
 
-  delete() {
+  delete(cardId) {
     this.DisplayMe = false;
+    console.log(cardId);
+    var hold = document.getElementById(cardId);
+    hold.style.display = 'none';
+    hold = document.getElementById("restore" + cardId);
+    hold.style.display = 'block';
+    hold = document.getElementById("edit" + cardId);
+    hold.style.display = 'none';
+    hold = document.getElementById("delete" + cardId);
+    hold.style.display = 'none';
+
+  }
+  restoreMe(cardId) {
+      console.log(cardId);
+      var hold = document.getElementById(cardId);
+      hold.style.display = 'none';
+      hold = document.getElementById("restore" + cardId);
+      hold.style.display = 'none';
+      hold = document.getElementById("edit" + cardId);
+      hold.style.display = 'block';
+      hold = document.getElementById("delete" + cardId);
+      hold.style.display = 'block';
   }
   displayFalse() {
     this.display = false;

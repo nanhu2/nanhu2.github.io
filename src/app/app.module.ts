@@ -5,16 +5,21 @@ import { AppComponent } from './app.component';
 import { BoardComponent } from './board/board.component';
 import { ListComponent } from './list/list.component';
 import { CardComponent } from './card/card.component';
+import { EditButtonComponent } from './edit-button/edit-button.component';
+import { AlertMeComponent } from './alert-me/alert-me.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardComponent,
     ListComponent,
-    CardComponent
+    CardComponent,
+    EditButtonComponent,
+    AlertMeComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
