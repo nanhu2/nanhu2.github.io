@@ -13,6 +13,11 @@ export class ListComponent implements OnInit {
   displayAddCard = false;
   constructor() {}
   toggleDisplayAddCard() {
+    const el: HTMLCollectionOf<Element> = document.getElementsByClassName("list__newcard");
+    for (let i = 0; i < el.length; i++){
+      const y = <HTMLElement>el[i];
+      y.style.visibility = "hidden";
+    }
     this.displayAddCard = !this.displayAddCard;
   }
   ngOnInit(): void {}
@@ -44,6 +49,15 @@ export class ListComponent implements OnInit {
     }
   }
   onEnter(value: string) {
+    const el: HTMLCollectionOf<Element> = document.getElementsByClassName("list__newcard");
+    for (let i = 0; i < el.length; i++){
+      const y = <HTMLElement>el[i];
+      y.style.visibility = "visible";
+    }
+    if (value === "") {
+      return;
+    }
+      this.displayAddCard = !this.displayAddCard
     const cardId = this.cardStore.newCard(value);
     this.list.cards.push(cardId);
   }
