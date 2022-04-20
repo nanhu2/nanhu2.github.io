@@ -1,5 +1,6 @@
+<button class="list__newcard" id = 'addCol' (click)="toggleDisplayAddList();"><span class = "add-card" [style.display]="'block'">Add a column</span></button>
 <div>
   <app-list *ngFor="let list of lists" [list]="list" [cardStore]="cardStore"></app-list>
   <input #addCardInput type="text" (keyup.enter)="onEnter(addCardInput.value); addCardInput.value=''; displayAddList=false;" *ngIf="displayAddList" autofocus>
-  <label class="list__newcard" id = 'addCol' (click)="toggleDisplayAddList();"><span class = "add-card" [style.display]="'block'">Add a column...</span></label>
+
 </div>

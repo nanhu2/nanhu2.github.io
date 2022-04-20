@@ -13,7 +13,7 @@ export class CardComponent implements OnInit {
 
   delete(cardId) {
     this.DisplayMe = false;
-    console.log(cardId);
+    window.alert("Deleting card.  This card can be found in the revert delete menu.");
     var hold = document.getElementById(cardId);
     hold.style.display = 'none';
     hold = document.getElementById("restore" + cardId);

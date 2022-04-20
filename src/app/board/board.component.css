@@ -19,9 +19,8 @@ input{
 .add-card{
   color: red;
   font-weight: bold;
-  border-style: solid;
-  border-color: red;
-  border-width: 5px;
-  display: inline;
+  display: inline-block;
+  max-height: 20px;
   border-radius: 25px;
+  cursor: pointer;
 }

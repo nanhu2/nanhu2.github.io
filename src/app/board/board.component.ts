@@ -42,6 +42,9 @@ export class BoardComponent implements OnInit {
     this.setMockData();
   }
   onEnter(value: string) {
+    if(value === ""){
+      return;
+    }
     const newList: ListSchema =
       {
         name: value,
